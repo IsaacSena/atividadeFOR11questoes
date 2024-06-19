@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 8</title>
+</head>
+<body>
+  <h1>Atividade 8</h1>
+  <div id="resultado"></div>
+
+  <script> 
+    const A = [];
+    const B = [];
+    const C = [];
+    const D = [];
+    let soma = 0
+    let multi = 0
+    
+
+    for (let a = 0; a < 3; a++) {
+      let numeroA = Number(prompt("Digite o número  de A:"));
+      A.push(numeroA);
+      let numeroB = Number(prompt("Digite o número  de B:"));
+      B.push(numeroB);
+      C.push(A[a] + B[a])
+      D.push(A[a] * B[a])
+    }  
+    for (let i = 0; i < C.length; i++) {
+  for (let j = i + 1 ; j < C.length; j++) {
+    if (C[i] < C[j]) {
+      [C[i], C[j]] = [C[j], C[i]];
+      if (D[i] > D[j]) {
+        [D[i], D[j]] = [D[j], D[i]];
+    }
+  }
+}
+}
+
+document.getElementById("resultado").innerHTML = C + "<br><br>" + D
+  
+
+
+  </script>
+
+</body>
+</html>
+
+
+

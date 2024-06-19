@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio11</title>
+</head>
+<body>
+   
+ 
+   
+    <div id="tudo"></div>
+ 
+ 
+ 
+ 
+ 
+    <script>
+ 
+        const numeros = []
+        let numero
+        let a = 0
+       
+        const tentativas = []
+        let tentativa
+        const erro = []
+       
+ 
+       
+ 
+        for(i = 0; i < 3; i++){
+ 
+            a++
+            numero = Number(prompt("Digite os numeros:"))
+            numeros.push(numero)
+ 
+        }
+ 
+        if(a == 3){
+           
+            for(j = 0; j < 3; j++){
+               
+                tentativa = Number(prompt("Digite as tentativas:"))
+                
+
+                for(k = 0; k < 3; k++){
+                if(tentativa == numeros[k]){
+                    tentativas.push(tentativa + " Está no array  ")
+                      
+                    }
+                      
+                }
+ 
+                if(tentativa != numeros[j] ){
+                    erro.push(tentativa + " Não está no array ")
+                    erro.pop(numeros[k]) 
+                }
+ 
+            }
+        }
+       
+ 
+ 
+        document.getElementById("tudo").innerHTML = tentativas + "<br>" + erro
+ 
+    </script>
+ 
+   
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetores</title>
+</head>
+<body>
+    
+    <div id="resultado"></div>
+
+    <script>
+
+        const nomealunos = ["Maria","Mariana","Mariluz","Mariacleide","Marinoite","Mariazinha"];
+
+
+        document.getElementById("resultado").innerHTML += nomealunos + "</br>";
+
+        nomealunos[1] = "João";
+
+        document.getElementById("resultado").innerHTML += nomealunos;
+
+        let numitensarray = nomealunos.length;
+        document.getElementById("resultado").innerHTML += "</br>Intes na array: " + numitensarray;
+
+
+        let mostrar = nomealunos[nomealunos.length - 2];
+        document.getElementById("resultado").innerHTML += "</br>Mostrar nome: " + mostrar;
+
+        taghtml = "<ul>";
+           for (let i = 0; i < nomealunos.length; i++) {
+            taghtml += "<li>" + nomealunos[i] + "</li>"
+            
+           }
+            taghtml += "</ul>"
+
+            document.getElementById("resultado").innerHTML += taghtml
+             
+        
+        
+
+
+    </script>
+
+
+</body>
+</html>

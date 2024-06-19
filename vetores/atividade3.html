@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+
+    <p id="tudo"></p>
+    <script>
+
+        const numeros = []
+        let numero 
+        const multiplicados = []
+
+        for (let i = 0; i < 3; i++) {
+            numero = Number(prompt("Digite os numeros"))
+            numeros.push(numero)
+            multiplicados.push(numero * 3)
+        
+        }
+
+        document.getElementById("tudo").innerHTML = numeros + "<br><br>"  + multiplicados
+        
+
+
+
+    </script>
+</body>
+</html>

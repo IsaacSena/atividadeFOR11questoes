@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio9</title>
+</head>
+<body>
+
+
+    <div id="tudo"></div>
+
+    <script>
+
+        const mercadorias = []
+        let codigo
+        const quantidades = []
+        let quantidade
+        let temporario
+        let temporario2 
+
+
+        for(i = 0; i < 3; i++){
+
+            codigo = (prompt("Digite os códigos:"))
+            mercadorias.push(codigo)
+            quantidade = (prompt("Digite as quantidades dos produtos:"))
+            quantidades.push(quantidade)
+
+
+            for(j = 0; j < 3; j++){
+
+                if(quantidades[j] > quantidades[i]){
+                    temporario = quantidades[i]
+                    quantidades[i] = quantidades[j]
+                    quantidades[j] = temporario
+
+                    temporario2 = mercadorias[j]
+                    mercadorias[j] = mercadorias[i]
+                    mercadorias[i] = temporario2
+
+                }
+
+            }
+
+        }
+
+        document.getElementById("tudo").innerHTML = mercadorias + "<br>" + quantidades
+
+    </script>
+
+
+
+
+</body>
+</html>

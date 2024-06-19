@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 4</title>
+</head>
+<body>
+
+<p id="tudo"></p>
+
+<script>
+
+
+const professores = []
+const profissao = []
+let nomes
+let tempo
+
+for (let i = 0; i < 3; i++) {
+    nomes = (prompt("Digite os nomes dos professores"))
+    professores.push(nomes)
+    tempo = (prompt("Digite os tempos de profissão"))
+    profissao.push(tempo)
+    
+}
+
+document.getElementById("tudo").innerText = "Nomes dos professores " + professores + "<br>Tempos de profissao dos professores " + profissao
+
+
+ 
+</script>
+
+
+</body>
+</html>

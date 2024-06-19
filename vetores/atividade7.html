@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>atividade 7</title>
+</head>
+<body>
+  <h1>atividade 7</h1>
+ <p id="resultado"></p>
+
+  <script>
+
+const numeros = []
+const multiplicados = []
+
+
+
+
+for (let a = 0; a < 5; a++) {
+ let inserir = Number(prompt("Digite os numeros"))
+ numeros.push(inserir)
+ multiplicados.push(inserir * 7) 
+}
+for (let i = 0; i < numeros.length; i++) {
+  for (let j = i + 1 ; j < numeros.length; j++) {
+    if (numeros[i] < numeros[j]) {
+      [numeros[i], numeros[j]] = [numeros[j], numeros[i]];
+      if (multiplicados[i] < multiplicados[j]) {
+        [multiplicados[i], multiplicados[j]] = [multiplicados[j], multiplicados[i]];
+      
+    }
+  }
+}
+}
+
+document.getElementById("resultado").innerHTML = numeros + "<br><br>" + multiplicados
+   
+  </script>
+
+
+</body>
+</html>
